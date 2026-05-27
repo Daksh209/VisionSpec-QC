@@ -95,6 +95,7 @@ heatmap = cv2.resize(heatmap, (224, 224))
 
 # Apply colormap
 heatmap = np.uint8(255 * heatmap)
+heatmap = cv2.GaussianBlur(heatmap, (15, 15), 0)
 heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
 
 # Overlay
