@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>VisionSpec QC</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        background: #f5f5f5;
+        padding-top: 50px;
+      }
+
+      .container {
+        background: white;
+        width: 500px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      input {
+        margin-top: 20px;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>VisionSpec QC</h1>
+
+      <h3>PCB Defect Detection System</h3>
+
+      <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required />
+
+        <br />
+
+        <button type="submit">Predict Defect</button>
+      </form>
+    </div>
+  </body>
+</html>
